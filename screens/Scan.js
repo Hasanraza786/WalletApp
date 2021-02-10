@@ -4,16 +4,10 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native'
-
 import { RNCamera } from 'react-native-camera';
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 
-
-
-
-
 const Scan = ({ navigation }) => {
-
     function renderHeader() {
         return (
             <View
@@ -66,7 +60,6 @@ const Scan = ({ navigation }) => {
                     }}
                 />
                 </TouchableOpacity>
-                
             </View>
         )
     }
@@ -187,12 +180,10 @@ const Scan = ({ navigation }) => {
             </View>
         )
     }
-
     function onBarCodeRead (result){
         console.warn(result.data)
 
     }
-
     return (
         <View style={{ flex: 1, backgroundColor: COLORS.transparent }}>
             <RNCamera
@@ -209,7 +200,6 @@ const Scan = ({ navigation }) => {
                     message: 'Camera is required for barcode scanning',
                     buttonPositive: "OK",
                     buttonNegative: 'Cancel'
-
                 }}
             >
                 {renderHeader()}
